@@ -11,8 +11,21 @@ body {
     flex-direction: column;
 }
 
+/* واجهة البداية */
+#main-screen {
+    background-image: url('images/baghdad-main.jpg'); /* اختر صورة معلم بغداد لواجهة البداية */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
 h1, h2 {
-    color: #333;
+    color: #fff;
     text-align: center;
 }
 
@@ -34,8 +47,10 @@ h1, h2 {
 
 /* تنسيق الغرف */
 .room {
-    display: none; /* كل غرفة مخفية بشكل افتراضي */
-    background-color: #ffffff;
+    display: none;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5); /* لتعتيم الخلفية على الصورة */
     border-radius: 10px;
     width: 80%;
     max-width: 500px;
@@ -43,8 +58,19 @@ h1, h2 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin: 20px auto;
+    color: white;
 }
 
+/* خلفيات لكل غرفة */
+#room-1 {
+    background-image: url('images/baghdad-landmark1.jpg');
+}
+
+#room-2 {
+    background-image: url('images/baghdad-landmark2.jpg');
+}
+
+/* وغيرها حسب الغرف التي تريد إضافة الصور لها */
 .room button {
     background-color: #007bff;
     color: white;
@@ -59,20 +85,6 @@ h1, h2 {
 
 .room button:hover {
     background-color: #0056b3;
-}
-
-/* تنسيق رسالة الإجابة الصحيحة والخاطئة */
-.alert {
-    padding: 10px;
-    background-color: #f44336;
-    color: white;
-    margin-top: 20px;
-    border-radius: 5px;
-    display: none;
-}
-
-.alert.success {
-    background-color: #4CAF50;
 }
 
 /* تنسيق موسيقى الخلفية */
