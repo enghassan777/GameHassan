@@ -4,27 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Hassan</title>
+    
+    <!-- ربط ملف CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="game-container">
-        <div id="main-screen">
-            <h1>مرحبا بك في لعبتي الخاصة</h1>
-            <button id="start-button">ابدأ اللعب</button>
-        </div>
-        <div id="game-rooms" style="display: none;">
-            <div id="room-1">
-                <h2>غرفة 1: اختر الإجابة الصحيحة</h2>
-                <div class="door">
-                    <p>السؤال 1: ما هو لون السماء؟</p>
-                    <button onclick="goToNextRoom(1)">أزرق</button>
-                    <button onclick="goToNextRoom(2)">أخضر</button>
-                    <button onclick="goToNextRoom(3)">أصفر</button>
-                </div>
-            </div>
-            <!-- أضف غرف إضافية هنا -->
-        </div>
+
+    <!-- واجهة اللعبة -->
+    <div id="main-screen">
+        <h1>مرحباً بك في لعبة حسن!</h1>
+        <p>اضغط على الزر للبدء!</p>
+        <button id="start-button">ابدأ اللعب</button>
     </div>
+
+    <!-- غرف اللعبة -->
+    <div id="game-rooms" style="display:none;">
+        <!-- غرفة 1 -->
+        <div class="room" id="room-1">
+            <h2>غرفة 1</h2>
+            <p>سؤال 1: ما هو أفضل لون؟</p>
+            <button onclick="goToNextRoom(1)">أزرق</button>
+            <button onclick="goToNextRoom(2)">أحمر</button>
+            <button onclick="goToNextRoom(3)">أخضر</button>
+        </div>
+
+        <!-- غرفة 2 -->
+        <div class="room" id="room-2" style="display:none;">
+            <h2>غرفة 2</h2>
+            <p>سؤال 2: أين تقع مصر؟</p>
+            <button onclick="goToNextRoom(1)">في أفريقيا</button>
+            <button onclick="goToNextRoom(2)">في أوروبا</button>
+            <button onclick="goToNextRoom(3)">في آسيا</button>
+        </div>
+
+        <!-- غرفة 3 -->
+        <div class="room" id="room-3" style="display:none;">
+            <h2>غرفة 3</h2>
+            <p>سؤال 3: ما هي عاصمة مصر؟</p>
+            <button onclick="goToNextRoom(1)">القاهرة</button>
+            <button onclick="goToNextRoom(2)">الإسكندرية</button>
+            <button onclick="goToNextRoom(3)">طنطا</button>
+        </div>
+
+        <!-- إضافة المزيد من الغرف كما تريد -->
+    </div>
+
+    <!-- تشغيل الأغنية في الخلفية -->
+    <audio id="background-music" autoplay loop>
+        <source src="song.mp3" type="audio/mp3">
+        متصفحك لا يدعم تشغيل الصوت.
+    </audio>
+
+    <!-- ربط ملف JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
