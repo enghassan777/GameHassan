@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Hassan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="main-screen">
+            <h1>مرحبا بك في لعبتي الخاصة</h1>
+            <button id="start-button">ابدأ اللعب</button>
+        </div>
+        <div id="game-rooms" style="display: none;">
+            <div id="room-1">
+                <h2>غرفة 1: اختر الإجابة الصحيحة</h2>
+                <div class="door">
+                    <p>السؤال 1: ما هو لون السماء؟</p>
+                    <button onclick="goToNextRoom(1)">أزرق</button>
+                    <button onclick="goToNextRoom(2)">أخضر</button>
+                    <button onclick="goToNextRoom(3)">أصفر</button>
+                </div>
+            </div>
+            <!-- أضف غرف إضافية هنا -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
