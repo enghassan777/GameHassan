@@ -13,7 +13,7 @@ body {
 
 /* واجهة البداية */
 #main-screen {
-    background-image: url('images/baghdad-main.jpg'); /* اختر صورة معلم بغداد لواجهة البداية */
+    background-image: url('https://images.app.goo.gl/fTSkg2kf4bome8XeA'); /* اختر صورة معلم بغداد لواجهة البداية */
     background-size: cover;
     background-position: center;
     height: 100vh;
