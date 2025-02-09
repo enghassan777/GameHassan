@@ -1,30 +1,81 @@
+/* إعدادات عامة للصفحة */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1a1a1a;
-    color: #fff;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+h1, h2 {
+    color: #333;
     text-align: center;
 }
 
-#game-container {
-    margin-top: 50px;
-}
-
-#main-screen h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-button {
+/* تنسيق زر البداية */
+#start-button {
+    padding: 15px 30px;
     background-color: #4CAF50;
     color: white;
-    font-size: 1.2rem;
-    padding: 15px 32px;
-    margin: 10px;
     border: none;
+    font-size: 18px;
     cursor: pointer;
     border-radius: 5px;
+    margin-top: 20px;
 }
 
-button:hover {
+#start-button:hover {
     background-color: #45a049;
+}
+
+/* تنسيق الغرف */
+.room {
+    display: none; /* كل غرفة مخفية بشكل افتراضي */
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px auto;
+}
+
+.room button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.room button:hover {
+    background-color: #0056b3;
+}
+
+/* تنسيق رسالة الإجابة الصحيحة والخاطئة */
+.alert {
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: none;
+}
+
+.alert.success {
+    background-color: #4CAF50;
+}
+
+/* تنسيق موسيقى الخلفية */
+audio {
+    display: none;
 }
